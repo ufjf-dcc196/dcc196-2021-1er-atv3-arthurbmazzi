@@ -27,37 +27,67 @@ public class MainActivity extends AppCompatActivity {
 
     public void Somar(View view)
     {
-        result1 = Double.parseDouble(firstNumber.getText().toString());
-        result2 = Double.parseDouble(secondNumber.getText().toString());
+        try {
+            result1 = Double.parseDouble(firstNumber.getText().toString());
+            result2 = Double.parseDouble(secondNumber.getText().toString());
 
-        Double addResult = result1 + result2;
-        result.setText(addResult.toString());
+            Double addResult = result1 + result2;
+            result.setText(addResult.toString());
+        }
+        catch (Exception e)
+        {
+            String errorMessage = "Try Again";
+            result.setText(errorMessage);
+        }
     }
 
     public void Subtrair(View view)
     {
-        result1 = Double.parseDouble(firstNumber.getText().toString());
-        result2 = Double.parseDouble(secondNumber.getText().toString());
+        try {
+            result1 = Double.parseDouble(firstNumber.getText().toString());
+            result2 = Double.parseDouble(secondNumber.getText().toString());
 
-        Double subResult = result1 - result2;
-        result.setText(subResult.toString());
+            Double subResult = result1 - result2;
+            result.setText(subResult.toString());
+        }
+        catch (Exception e)
+        {
+            String errorMessage = "Try Again";
+            result.setText(errorMessage);
+        }
     }
 
     public void Dividir(View view)
     {
-        result1 = Double.parseDouble(firstNumber.getText().toString());
-        result2 = Double.parseDouble(secondNumber.getText().toString());
+        try {
+            result1 = Double.parseDouble(firstNumber.getText().toString());
+            result2 = Double.parseDouble(secondNumber.getText().toString());
 
-        Double divResult = result1 / result2;
-        result.setText(divResult.toString());
+            if(result2 == 0)
+                throw new Exception();
+
+            Double divResult = result1 / result2;
+            result.setText(divResult.toString());
+        }
+        catch (Exception e)
+        {
+            String errorMessage = "Try Again";
+            result.setText(errorMessage);
+        }
     }
 
-    public void Multiplicar(View view)
-    {
-        result1 = Double.parseDouble(firstNumber.getText().toString());
-        result2 = Double.parseDouble(secondNumber.getText().toString());
+    public void Multiplicar(View view) {
+        try {
+            result1 = Double.parseDouble(firstNumber.getText().toString());
+            result2 = Double.parseDouble(secondNumber.getText().toString());
 
         Double multResult = result1 * result2;
         result.setText(multResult.toString());
+        }
+        catch (Exception e)
+        {
+            String errorMessage = "Try Again";
+            result.setText(errorMessage);
+        }
     }
 }
