@@ -10,19 +10,21 @@
         android:id="@+id/firstNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="number|numberDecimal"
         android:text="Digite o primeiro número"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="172dp" />
+        app:layout_constraintStart_toStartOf="@+id/firstNumberLabel"
+        app:layout_constraintTop_toBottomOf="@+id/firstNumberLabel" />
 
     <TextView
         android:id="@+id/firstNumberLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="Primeiro número:"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="131dp" />
+        app:layout_constraintStart_toStartOf="@+id/calculatorTitle"
+        app:layout_constraintTop_toBottomOf="@+id/calculatorTitle" />
 
     <TextView
         android:id="@+id/resultLabel"
@@ -33,41 +35,53 @@
         app:layout_constraintHorizontal_bias="0.13"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/secondNumber"
+        app:layout_constraintTop_toBottomOf="@+id/secondNumber"
         app:layout_constraintVertical_bias="0.577" />
 
     <EditText
         android:id="@+id/secondNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:text="Digite o segundo número"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="278dp" />
+        app:layout_constraintStart_toStartOf="@+id/secondNumberLabel"
+        app:layout_constraintTop_toBottomOf="@+id/secondNumberLabel" />
 
     <TextView
         android:id="@+id/calculatorTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="Calculadora Básica"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="46dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.060000002" />
 
     <TextView
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:text="-"
-        tools:layout_editor_absoluteX="122dp"
-        tools:layout_editor_absoluteY="412dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/resultLabel"
+        app:layout_constraintTop_toTopOf="@+id/resultLabel"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/secondNumberLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Segundo número:"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="240dp" />
+        app:layout_constraintStart_toStartOf="@+id/firstNumber"
+        app:layout_constraintTop_toBottomOf="@+id/firstNumber" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
