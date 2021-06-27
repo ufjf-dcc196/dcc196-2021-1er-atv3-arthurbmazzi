@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         }
         catch (Exception e)
         {
-            String errorMessage = "Try Again";
+            String errorMessage = "Nº(s) Inválidos";
             result.setText(errorMessage);
         }
     }
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         }
         catch (Exception e)
         {
-            String errorMessage = "Try Again";
+            String errorMessage = "Nº(s) Inválidos";
             result.setText(errorMessage);
         }
     }
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         }
         catch (Exception e)
         {
-            String errorMessage = "Try Again";
+            String errorMessage = "Nº(s) Inválidos";
             result.setText(errorMessage);
         }
     }
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         }
         catch (Exception e)
         {
-            String errorMessage = "Try Again";
+            String errorMessage = "Nº(s) Inválidos";
             result.setText(errorMessage);
         }
     }
